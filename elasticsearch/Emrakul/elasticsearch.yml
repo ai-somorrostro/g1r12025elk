@@ -1,13 +1,12 @@
 # ======================== Elasticsearch Configuration =========================
 # Estas lineas de configuracion son las que hay que añadir
-cluster.name: Blind-Eternities
-node.name: Emrakul
-network.host: 0.0.0.0
-transport.host: 0.0.0.0
-node.roles: [ master, ingest, data]
-http.port: 9200
-transport.port: 9300
-
+cluster.name: Blind-Eternities           # Nombre del cluster
+node.name: Emrakul                       # Nombre del nodo
+network.host: 0.0.0.0                    # Escuchar en todas las interfaces de red
+transport.host: 0.0.0.0                  # Escuchar en todas las interfaces de red para transporte
+node.roles: [ master, ingest, data]      # Roles del nodo
+http.port: 9200                          # Puerto para conexiones HTTP
+transport.port: 9300                     # Puerto para transporte entre nodos
 # ========================= Fin de la Configuracion ============================
 # A partir de aqui, el resto del archivo es autogenerado una vez que inicies por primera vez el nodo
 
