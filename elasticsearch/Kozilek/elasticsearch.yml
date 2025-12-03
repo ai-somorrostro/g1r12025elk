@@ -1,0 +1,41 @@
+# ======================== Elasticsearch Configuration =========================
+# Estas lineas de configuracion son las que hay que añadir
+cluster.name: Blind-Eternities           # Nombre del cluster
+node.name: Kozilek                       # Nombre del nodo
+network.host: 0.0.0.0                    # Escuchar en todas las interfaces de red
+transport.host: 0.0.0.0                  # Escuchar en todas las interfaces de red para transporte
+node.roles: [ master, ingest, data]      # Roles del nodo
+http.port: 9200                          # Puerto para conexiones HTTP
+transport.port: 9300                     # Puerto para transporte entre nodos
+# ========================= Fin de la Configuracion ============================
+# A partir de aqui, el resto del archivo es autogenerado una vez que inicies por primera vez el nodo
+
+
+
+#----------------------- BEGIN SECURITY AUTO CONFIGURATION -----------------------
+#
+# The following settings, TLS certificates, and keys have been automatically
+# generated to configure Elasticsearch security features on 26-11-2025 10:31:53
+#
+# --------------------------------------------------------------------------------
+
+# Enable security features
+xpack.security.enabled: true
+
+xpack.security.enrollment.enabled: true
+
+# Enable encryption for HTTP API client connections, such as Kibana, Logstash, and Agents
+xpack.security.http.ssl:
+  enabled: true
+  keystore.path: certs/http.p12
+
+# Enable encryption and mutual authentication between cluster nodes
+xpack.security.transport.ssl:
+  enabled: true
+  verification_mode: certificate
+  keystore.path: certs/transport.p12
+  truststore.path: certs/transport.p12
+# Discover existing nodes in the cluster
+discovery.seed_hosts: ["192.199.1.55:9300"]
+
+#----------------------- END SECURITY AUTO CONFIGURATION -------------------------
