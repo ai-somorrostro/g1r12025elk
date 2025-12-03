@@ -1,4 +1,14 @@
 # Apartado de configuracion de elasticsearch
+## Explicacion inicial
+
+En esta carpeta Elasticsearch puedes encontrar los ficheros que han sido modificados a mano, comentados para mejor comprension.
+Los ficheros editados son:
+
+carpeta: elasticsearch
+    - carpeta: conf
+        - jvm.options
+        - elasticsearch.yml
+
 ## Numero de nodos
 
 Este proyecto presta de 3 nodos bajo el cluster Blind-Eternities:
