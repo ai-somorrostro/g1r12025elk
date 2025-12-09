@@ -1,0 +1,36 @@
+  "mappings": {
+    "properties": {
+      "name": { "type": "text", "analyzer": "standard" },
+      "lang": { "type": "text", "analyzer": "standard" },
+      "released_at": { "type": "date", "format": "yyyy-MM-dd" },
+      "image_png": { "type": "text", "analyzer": "standard" },
+      "mana_cost": { "type": "text", "analyzer": "standard" },
+      "cmc": { "type": "float" },
+      "type_line": { "type": "text", "analyzer": "standard" },
+      "colors": { "type": "keyword" },
+      "color_identity": { "type": "keyword" },
+      "oracle_text": { "type": "text", "analyzer": "standard" },
+      "oracle_id": { "type": "text", "analyzer": "standard" },
+      "parent_id": { "type": "text", "analyzer": "standard" },
+      "face_number": { "type": "integer", "null_value": "-1" },
+      "keywords": { "type": "keyword" },
+      "produced_mana": { "type": "keyword" },
+      "commander_legality": { "type": "keyword" },
+      "game_changer": { "type": "boolean" },
+      "set_name": { "type": "text", "analyzer": "standard" },
+      "rarity": { "type": "keyword" },
+      "artist": { "type": "text", "analyzer": "standard" },
+      "full_art": { "type": "boolean" },
+      "booster": { "type": "boolean" },
+      "ranking": { "type": "integer", "null_value": "0" },
+      "price_usd": { "type": "float" },
+      "price_usd_foil": { "type": "float" },
+      "strength": { "type": "text" },
+      "toughness": { "type": "text" },
+      "embedding": {
+        "type": "dense_vector",
+        "index": true,
+        "similarity": "cosine"
+      }
+    }
+  }

@@ -1,0 +1,36 @@
+# Las 10 cartas más caras
+GET cartas_magic/_search
+{
+  "size": 10,
+  "sort": [
+    { "price_usd": { "order": "desc" } }
+  ],
+  "_source": ["name", "rarity", "price_usd"]
+}
+
+# Distribución por artista
+GET cartas_magic/_search
+{
+  "size": 0,
+  "aggs": {
+    "por_artista": {
+      "terms": {
+        "field": "artist.keyword",
+        "size": 10
+      }
+    }
+  }
+}
+
+# Cartas con ranking alto
+GET cartas_magic/_search
+{
+  "query": {
+    "range": {
+      "ranking": {
+        "gte": 90
+      }
+    }
+  },
+  "_source": ["name", "rarity", "ranking", "price_usd"]
+}
