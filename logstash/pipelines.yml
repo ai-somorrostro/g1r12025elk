@@ -1,0 +1,8 @@
+# List of pipelines to be loaded by Logstash
+#
+# This document must be a list of dictionaries/hashes, where the keys/values are pipeline settings.
+# Default values for omitted settings are read from the `logstash.yml` file.
+# When declaring multiple pipelines, each MUST have its own `pipeline.id`.
+- pipeline.id: cartas-magic
+  path.config: "/home/g1/logstash-9.2.1/config/pipeline_cartas/*.conf"
+  pipeline.batch.size: 50

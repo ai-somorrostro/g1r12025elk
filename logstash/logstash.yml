@@ -1,0 +1,7 @@
+# Nombre del nodo logstash
+node.name: mad-prophet
+
+
+# ------------ X-Pack Settings (not applicable for OSS build)--------------
+xpack.monitoring.enabled: true
+xpack.monitoring.elasticsearch.hosts: ["https://192.199.1.55:9200", "https://192.199.1.56:9200", "https://192.199.1.57:9200"]
