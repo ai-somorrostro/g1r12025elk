@@ -1,0 +1,31 @@
+API keys:
+
+logstash-cartas-escritura:
+"GC3kBJsB8sZQN9cjis7T:dgvX-5JJE_vTSPK58-ZwoA"
+
+en devtools:
+POST /_security/api_key
+{
+  "name": "logstash-cartas-escritura",
+  "role_descriptors": {
+    "logstash_writer": {
+      "cluster": ["monitor"],
+      "index": [
+        {
+          "names": ["cartas_magic"],
+          "privileges": ["write","create","create_index","index"]
+        }
+      ]
+    }
+  }
+}
+
+
+resultado:
+{
+  "id": "GC3kBJsB8sZQN9cjis7T",
+  "name": "logstash-cartas-escritura",
+  "api_key": "dgvX-5JJE_vTSPK58-ZwoA",
+  "encoded": "R0Mza0JKc0I4c1pRTjljamlzN1Q6ZGd2WC01SkpFX3ZUU1BLNTgtWndvQQ=="
+}
+

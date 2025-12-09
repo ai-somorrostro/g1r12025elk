@@ -1,0 +1,22 @@
+### >>>>>>> BACKUP START: Kibana interactive setup (2025-11-26T10:58:51.582Z)
+
+# For more configuration options see the configuration guide for Kibana in
+# https://www.elastic.co/guide/index.html
+
+# =================== System: Kibana Server ===================
+# Kibana is served by a back end server. This setting specifies the port to use.
+server.port: 5601
+server.host: 0.0.0.0
+elasticsearch.sniffOnStart: true
+elasticsearch.sniffOnConnectionFault: true
+elasticsearch.sniffInterval: 1000
+
+# This section was automatically generated during setup.
+elasticsearch.hosts: ["https://192.199.1.55:9200", "https://192.199.1.56:9200", "https://192.199.1.57:9200"]
+elasticsearch.serviceAccountToken: AAEAAWVsYXN0aWMva2liYW5hL2Vucm9sbC1wcm9jZXNzLXRva2VuLTE3NjQ5MzM2MDcxOTk6bkJpaXh5a2dUdHVIbkdEb0MzQk5hQQ
+elasticsearch.ssl.certificateAuthorities: [/home/g1/kibana-9.2.1/data/ca_1764933608095.crt]
+xpack.fleet.outputs: [{id: fleet-default-output, name: default, is_default: true, is_default_monitoring: true, type: elasticsearch, hosts: ["https://192.199.1.55:9200", "https://192.199.1.56:9200", "https://192.199.1.57:9200"], ca_trusted_fingerprint: 48089be38f214ed3e6c8af869cd50915dc2dcd4c46ed4c46e4c3809f5ae1ca3f7986b8}]
+xpack.encryptedSavedObjects.encryptionKey: 4505f7d3148148826c436e3b0bbf60e8
+xpack.reporting.encryptionKey: ed2a773893c5c405dda503140fc34e80
+xpack.security.encryptionKey: 57a04944489fbefd9a91b11e277f1425
+monitoring.ui.ccs.enabled: false
