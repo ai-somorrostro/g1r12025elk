@@ -9,7 +9,7 @@
       "type_line": { "type": "text", "analyzer": "standard" },
       "colors": { "type": "keyword" },
       "color_identity": { "type": "keyword" },
-      "oracle_text": { "type": "text", "analyzer": "standard" },
+      "oracle_text": { "type": "text", "analyzer": "english" },
       "oracle_id": { "type": "text", "analyzer": "standard" },
       "parent_id": { "type": "text", "analyzer": "standard" },
       "face_number": { "type": "integer", "null_value": "-1" },
