@@ -1,12 +1,12 @@
 # Module: elasticsearch
 # Docs: https://www.elastic.co/guide/en/beats/metricbeat/main/metricbeat-module-elasticsearch.html
-
+ 
 - module: elasticsearch
   xpack.enabled: true
   period: 10s
   hosts: ["192.199.1.55:9200", "192.199.1.56:9200", "192.199.1.57:9200"] #ip + puerto de elastic
   username: "elastic"
-  password: "miclaveelastic"
-
+  password: "${ES_PASSWORD}"       # usar variable de entorno o metricbeat keystore
+ 
   ssl:
      certificate_authorities: ["/home/g1/elasticsearch-9.2.1/config/certs/http_ca.crt"] # ruta al certificado de elastic
