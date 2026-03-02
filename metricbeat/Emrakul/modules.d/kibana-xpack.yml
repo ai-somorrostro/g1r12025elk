@@ -1,11 +1,11 @@
 # Module: kibana
 # Docs: https://www.elastic.co/guide/en/beats/metricbeat/main/metricbeat-module-kibana.html
-
+ 
 - module: kibana
   xpack.enabled: true
   period: 10s
   hosts: ["192.199.1.55:5601"]
   #basepath: ""
   username: "kibana_system"
-  password: "Nicolbolas2026+"
+  password: "${KIBANA_SYSTEM_PASSWORD}"  # usar variable de entorno o metricbeat keystore
   #api_key: "foo:bar"

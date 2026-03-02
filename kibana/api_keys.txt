@@ -1,31 +1,37 @@
-API keys:
-
-logstash-cartas-escritura:
-"GC3kBJsB8sZQN9cjis7T:dgvX-5JJE_vTSPK58-ZwoA"
-
-en devtools:
-POST /_security/api_key
-{
-  "name": "logstash-cartas-escritura",
-  "role_descriptors": {
-    "logstash_writer": {
-      "cluster": ["monitor"],
-      "index": [
-        {
-          "names": ["cartas_magic"],
-          "privileges": ["write","create","create_index","index"]
-        }
-      ]
-    }
-  }
-}
-
-
-resultado:
-{
-  "id": "GC3kBJsB8sZQN9cjis7T",
-  "name": "logstash-cartas-escritura",
-  "api_key": "dgvX-5JJE_vTSPK58-ZwoA",
-  "encoded": "R0Mza0JKc0I4c1pRTjljamlzN1Q6ZGd2WC01SkpFX3ZUU1BLNTgtWndvQQ=="
-}
-
+# ============================================================
+# API Keys - NO INCLUIR VALORES REALES EN ESTE FICHERO
+# ============================================================
+# Las API keys deben generarse en Kibana Dev Tools y almacenarse
+# de forma segura (keystore de Elasticsearch, gestor de secretos, etc.)
+#
+# Ejemplo de creación en Dev Tools:
+#
+# POST /_security/api_key
+# {
+#   "name": "logstash-cartas-escritura",
+#   "role_descriptors": {
+#     "logstash_writer": {
+#       "cluster": ["monitor"],
+#       "index": [
+#         {
+#           "names": ["cartas_magic"],
+#           "privileges": ["write","create","create_index","index"]
+#         }
+#       ]
+#     }
+#   }
+# }
+#
+# El resultado tendrá esta estructura (valores ficticios):
+#
+# {
+#   "id": "<API_KEY_ID>",
+#   "name": "logstash-cartas-escritura",
+#   "api_key": "<API_KEY_SECRET>",
+#   "encoded": "<BASE64_ENCODED_KEY>"
+# }
+#
+# Para usar en logstash: api_key => "<API_KEY_ID>:<API_KEY_SECRET>"
+#
+# IMPORTANTE: Revocar y regenerar si la clave ha sido expuesta.
+ 
